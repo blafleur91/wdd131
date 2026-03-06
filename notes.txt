@@ -1,0 +1,155 @@
+\This is the notes for variables and how to use them in javascript/
+
+YOU DO A JAVA SCRIPT BY <script src="scripts/yourscript.js" defer></script>
+
+//
+to make a note in javascript, do // for one line, or
+/*
+for a multiline comment
+*/
+
+java script variables are created using let. i.e. let variableName = "bop";
+
+code stuff has to end in a semicolon (;)
+
+arrays are lists in java script i.e. let myNameArray = ["Chris", "Bob", "Jim"];
+
+to access specific spots in the array, you put the name of the array followed by
+brackets. you then put the number in the spot to get which one you want specifically.
+The number convention is the same as python (starts at 0).
+
+objects use the squiggly brackets, and they work like this:
+let dog = { name: "Spot", breed: "Dalmation" };
+
+objects are not like python dictionaries, instead they store multiple types
+of information about one thing.
+
+if you want the things in javascript to be a string you use the quotes method
+but for numbers to be registed as numbers you need no qoutes.
+
+using let allows you to declare a variable without initializing it. this means
+you can type just ^ let count; ^ and that would not produce an error.
+
+initializing is giving the variable a value of some sort
+
+constants require you to initialize the variable, and also cannot be changed later.
+constants are typed out like this: const count = 1;
+
+the rule for using const and let is to always use const unless you have to change the
+value of the variable, then you can use let. this way people know what something is
+easier.
+
+//
+
+\this is notes for JavaScript data types and data structures/
+//
+javascript, unlike python, lets data be stored in one type and changed to another
+for example, you can have a variable be a number, then a string, and then a boolean.
+it also automatically converts the data to match the type it needs to, i.e if you
+were to use string addition (foo + "1") on a number variable, it would auto switch
+it into a string to make it work.
+
+different types of data
+
+Type:       typeof return value:        Object wrapper:
+Null        "object"                    n/a
+Undefined   "undefined"                 n/a
+Boolean     "boolean"                   Boolean
+Number      "number"                    Number
+BigInt      "bigint"                    BigInt
+String      "string"                    String     
+Symbol      "symbol"                    Symbol
+
+null only has value of null
+
+undefined only has the value of undefined
+
+null implies the object is missing (what a value is stored in) whereas undefined
+means you are missing the value in a variable (object)
+
+boolean has either true or false. good for if else statements
+
+number type is for numbers.
+
+bigint is for safely storing/operating on large integers beyond the safe integer limit
+
+bigint is created by appending n to the end of an integer or by calling the BigInt() 
+function. to use the function you call it like this.
+const x = BigInt(Number.MAX_SAFE_INTEGER);
+they will give a TypeError
+
+string is textual data and is encoded just like python. it has index info to access
+each of the spots in the string(each letter). however, unlike in python the string
+can't be modified, instead creating an entirely new string based off the original
+
+symbols are meant to create a value that can be used as a key for objects. kind of
+like how dictionaries keys work in python
+
+objects consist of two types of properties. data property and accessor property
+
+data property associates a key with a value
+
+accessor property is either get or set.
+
+get function retrieves a value from the object, and the set function stores value
+to the object.
+
+dates can be represented by the temporal object.
+
+arrays are for lists of values. can use length, indexOf()[searches a 
+value in the array], and push()[appends an element to the array]
+//
+
+\notes for template literals(template strings)/
+//
+template literals are strings allowing embedded expressions.
+
+to do a template literal you have to use the backtick character. ` instead of quotes
+' "
+
+you can put a placeholder (basically a variable that you give a value) by doing:
+${insertnameofthinghere}
+
+example of template literal is: let message = `Hello, ${name}!`;
+
+homework/practice of it:
+
+change this into template literal using the non quoted names for variable names.
+let output = "Welcome to " + courseSubject + " " + courseNumber + "!<br>Credits: " + courseCredits
+
+let output = `Welcome to ${courseSubject} ${courseNumber}!<br>Credits: ${courseCredits}`;
+
+finish this code snippet using template literals
+
+let temples = ["Rome", "Salt Lake", "Nauvoo"];
+let listItems = "";
+for (const temple of temples) {
+  listItems += `<li>__________</li>`;
+}
+document.querySelector("ul").innerHTML = listItems;
+
+listItems += `<li>${temple}</li>`;
+
+//
+
+NOTES ABOUT CRAP NOT COVERED IN LESSONS BUT SOMEHOW SUPPOSED TO KNOW
+//
+Answer: #2
+
+❔What are some other built in functions or methods that can 
+change a string (sequence of characters) to a number?
+
+The parseInt() function parses a string and returns an integer.
+
+The parseFloat() function parses a string and returns a floating-point number.
+
+Unary plus operator (+), e.g., result = one; result += +two; . 
+Using the unary plus operator converts a string to a number.
+
+Number() constructur can be used to create a new Number object, 
+or when called as a function, it converts a string to a number data type.
+
+NaN means "Not a Number". It is a special value that represents 
+the result of an invalid or undefined mathematical operation. 
+If any operand in an arithmetic expression is NaN, the result of the 
+entire expression will be NaN. NaN is not equal to any value, including NaN.
