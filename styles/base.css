@@ -1,8 +1,10 @@
 * {
-    --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
     padding: 1rem;
     margin: 0;
+}
+
+header {
+    margin: 0.5rem;
 }
 
 .course-title {
@@ -19,6 +21,9 @@ more specifically to give it a box, the color of text and the box, and then if i
 and when you hover over it if it has a text decoration. */
 .navigation {
     background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
 }
 
 /* have to put the text color here to make it work instead of any of the other ones. */
@@ -38,6 +43,11 @@ nav ul {
     font-size: 1.25rem;
 }
 
+body {
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
+}
+
 main {
     display: grid;
     max-width: 1600px;
@@ -50,6 +60,7 @@ h1 {
     align-self: center;
     text-align: center;
     grid-column: span 2;
+    font-weight: 500;
 }
 
 .card {
