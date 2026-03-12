@@ -1,0 +1,26 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header, main, footer {
+    max-width: 640px;
+    /* apparently, the margin code is what centers stuff. */
+    margin: 1rem auto;
+    /* for a faint border, they did this. */
+    border: solid 1px #bbb;
+    /* for appropriate padding, they used 1rem */
+    padding: 1rem;
+    background-color: aquamarine;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* to get a gap for grid stuff, use grid-gap command */
+    grid-gap: 1rem;
+}
+
+section {
+    padding: 1rem;
+    background-color: #fff;
+}
