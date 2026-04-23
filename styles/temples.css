@@ -29,6 +29,9 @@ header {
     color: #000;
 }
 
+/* I was having a problem where I had a instead of li below. the li below accurately targets
+the list of links so it actually will do what is wanted. */
+
 .open li {
     display: block;
 }
