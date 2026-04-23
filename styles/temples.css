@@ -1,0 +1,73 @@
+header {
+    display: block;
+    background-color: rgb(1, 1, 70);
+    color: #eee;
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: auto;
+}
+
+.navigation {
+    background-color: #333;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+    background-color: #eee;
+    color: #000;
+}
+
+.open li {
+    display: block;
+}
+
+#menu {
+    font-size: 1rem;
+    border: 0;
+    background: none;
+    color: #eee;
+    position: relative;
+    top: 1rem;
+    right: 1rem;
+    float: right;
+}
+
+
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "X";
+}
+
+body {
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
+}
+
+footer {
+    grid-column: span 2;
+    background-color: rgb(1, 1, 70);
+    color: #eee;
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: auto;
+}
+footer p {
+    text-align: center;
+    
+}
