@@ -1,0 +1,521 @@
+\This is the notes for variables and how to use them in javascript/
+
+YOU DO A JAVA SCRIPT BY <script src="scripts/yourscript.js" defer></script>
+
+//
+to make a note in javascript, do // for one line, or
+/*
+for a multiline comment
+*/
+
+java script variables are created using let. i.e. let variableName = "bop";
+
+code stuff has to end in a semicolon (;)
+
+arrays are lists in java script i.e. let myNameArray = ["Chris", "Bob", "Jim"];
+
+to access specific spots in the array, you put the name of the array followed by
+brackets. you then put the number in the spot to get which one you want specifically.
+The number convention is the same as python (starts at 0).
+
+objects use the squiggly brackets, and they work like this:
+let dog = { name: "Spot", breed: "Dalmation" };
+
+objects are not like python dictionaries, instead they store multiple types
+of information about one thing.
+
+if you want the things in javascript to be a string you use the quotes method
+but for numbers to be registed as numbers you need no qoutes.
+
+using let allows you to declare a variable without initializing it. this means
+you can type just ^ let count; ^ and that would not produce an error.
+
+initializing is giving the variable a value of some sort
+
+constants require you to initialize the variable, and also cannot be changed later.
+constants are typed out like this: const count = 1;
+
+the rule for using const and let is to always use const unless you have to change the
+value of the variable, then you can use let. this way people know what something is
+easier.
+
+//
+
+\this is notes for JavaScript data types and data structures/
+//
+javascript, unlike python, lets data be stored in one type and changed to another
+for example, you can have a variable be a number, then a string, and then a boolean.
+it also automatically converts the data to match the type it needs to, i.e if you
+were to use string addition (foo + "1") on a number variable, it would auto switch
+it into a string to make it work.
+
+different types of data
+
+Type:       typeof return value:        Object wrapper:
+Null        "object"                    n/a
+Undefined   "undefined"                 n/a
+Boolean     "boolean"                   Boolean
+Number      "number"                    Number
+BigInt      "bigint"                    BigInt
+String      "string"                    String     
+Symbol      "symbol"                    Symbol
+
+null only has value of null
+
+undefined only has the value of undefined
+
+null implies the object is missing (what a value is stored in) whereas undefined
+means you are missing the value in a variable (object)
+
+boolean has either true or false. good for if else statements
+
+number type is for numbers.
+
+bigint is for safely storing/operating on large integers beyond the safe integer limit
+
+bigint is created by appending n to the end of an integer or by calling the BigInt() 
+function. to use the function you call it like this.
+const x = BigInt(Number.MAX_SAFE_INTEGER);
+they will give a TypeError
+
+string is textual data and is encoded just like python. it has index info to access
+each of the spots in the string(each letter). however, unlike in python the string
+can't be modified, instead creating an entirely new string based off the original
+
+symbols are meant to create a value that can be used as a key for objects. kind of
+like how dictionaries keys work in python
+
+objects consist of two types of properties. data property and accessor property
+
+data property associates a key with a value
+
+accessor property is either get or set.
+
+get function retrieves a value from the object, and the set function stores value
+to the object.
+
+dates can be represented by the temporal object.
+
+arrays are for lists of values. can use length, indexOf()[searches a 
+value in the array], and push()[appends an element to the array]
+//
+
+\notes for template literals(template strings)/
+//
+template literals are strings allowing embedded expressions.
+
+to do a template literal you have to use the backtick character. ` instead of quotes
+' "
+
+you can put a placeholder (basically a variable that you give a value) by doing:
+${insertnameofthinghere}
+
+example of template literal is: let message = `Hello, ${name}!`;
+
+homework/practice of it:
+
+change this into template literal using the non quoted names for variable names.
+let output = "Welcome to " + courseSubject + " " + courseNumber + "!<br>Credits: " + courseCredits
+
+let output = `Welcome to ${courseSubject} ${courseNumber}!<br>Credits: ${courseCredits}`;
+
+finish this code snippet using template literals
+
+let temples = ["Rome", "Salt Lake", "Nauvoo"];
+let listItems = "";
+for (const temple of temples) {
+  listItems += `<li>__________</li>`;
+}
+document.querySelector("ul").innerHTML = listItems;
+
+listItems += `<li>${temple}</li>`;
+
+//
+
+NOTES ABOUT CRAP NOT COVERED IN LESSONS BUT SOMEHOW SUPPOSED TO KNOW
+//
+Answer: #2
+
+❔What are some other built in functions or methods that can 
+change a string (sequence of characters) to a number?
+
+The parseInt() function parses a string and returns an integer.
+
+The parseFloat() function parses a string and returns a floating-point number.
+
+Unary plus operator (+), e.g., result = one; result += +two; . 
+Using the unary plus operator converts a string to a number.
+
+Number() constructur can be used to create a new Number object, 
+or when called as a function, it converts a string to a number data type.
+
+NaN means "Not a Number". It is a special value that represents 
+the result of an invalid or undefined mathematical operation. 
+If any operand in an arithmetic expression is NaN, the result of the 
+entire expression will be NaN. NaN is not equal to any value, including NaN.
+
+
+\\ week 02 CSS Media Queries //
+
+@media specifies conditions to determine when when a block of CSS rules should be applied.
+
+@media gets its own curly braces {}, and th Css block goes into those curly braces.
+
+I.E. (this is from the lesson. it is an example of code and then the explanation)
+
+//
+1️⃣ @media screen and (min-width: 640px) {
+2️⃣   h1 {
+3️⃣     font-size: 2.5rem;
+4️⃣     margin: 1rem;
+5️⃣     color: navy;
+6️⃣   }
+7️⃣ }
+
+Code explanation
+
+1️⃣ @media screen and (min-width: 640px) { is the signature line of the @media query block that applies CSS rules when the 
+specified conditions are met. In this example, the conditions require the media type to be a screen and the viewport 
+width to be at least 640 pixels.
+
+2️⃣ h1 { <h1> element selector starts the defined CSS rule.
+
+3️⃣-5️⃣ font-size: 2.5rem; margin: 1rem; color: navy; are declarations to be applied to any <h1> elements if the @media query 
+conditions are met.
+
+6️⃣ The first } closes the CSS rule for <h1> code elements.
+
+7️⃣ The last } closes the media query.
+
+Note that curly brackets { } are used to contain a specific media query and are also used to define CSS Rules. 
+A common mistake is to close the @media query container too soon or not at all. Using the automatic indentation 
+feature of VS Code document formatting features will help you recognize issues with your CSS syntax.
+//
+
+Look at week 02's media query stuff. that is the majority of this lesson.
+//
+
+
+
+\\ Week 02 JavaScript Constructs //
+//
+
+operators are the math symbols used to assign values to variables.
+In JavaScript they consist of
+
+Operator
+Description
+Example
+Same As
+
+=
+Assigns a value to a variable
+x = y
+x = y
+
++=
+Adds a value to a variable
+x += y
+x = x + y
+
+-=
+Subtracts a value from a variable
+x -= y
+x = x - y
+
+*=
+Multiplies a variable by a value
+x *= y
+x = x * y
+
+/=
+Divides a variable by a value
+x /= y
+x = x / y
+
+%=
+Assigns a remainder to a variable
+x %= y
+x = x % y
+
+**=
+Exponentiates a variable by a value
+x **= y
+x = x ** y
+
+&&=
+Logical AND assignment
+x &&= y
+x = x && y
+
+||=
+Logical OR assignment
+x ||= y
+x = x || y
+
+//
+
+Arithmetic operators used to perform arithmetic operations.
+
+Operator
+Description
+Example
+Same As
+
++
+Addition
+x + y
+x + y
+
+-
+Subtraction
+x - y
+x - y
+
+*
+Multiplication
+x * y
+x * y
+
+/
+Division
+x / y
+x / y
+
+%
+Modulus (Remainder)
+x % y
+x % y
+
+**
+Exponentiation
+x ** y
+x ** y
+
+//
+
+Comparison Operators: they compare two values and return a boolean value based on the comparison.
+
+Operator
+Description
+Example
+Returns
+
+==
+Equal to
+x == y
+true if x is equal to y
+
+===
+Strict equal to
+x === y
+true if x is equal to y and they are of the same data type
+
+!=
+Not equal to
+x != y
+true if x is not equal to y
+
+!==
+Strict not equal to
+x !== y
+true if x is not equal to y or they are of different types
+
+<
+Less than
+x < y
+true if x is less than y
+
+<=
+Less than or equal to
+x <= y
+true if x is less than or equal to y
+
+//
+
+Logical Operators: used to combine multiple boolean expresssions and return a boolean value based on the
+compounded logical operation.
+
+Operator
+Description
+Example
+Returns
+
+&&
+Logical AND
+x && y
+true if both x and y are true
+
+||
+Logical OR
+x || y
+true if either x or y is true
+
+!
+Logical NOT
+!x
+true if x is false; false if x is true
+
+//
+
+Expression: they are a combination of values, variables, operators, and functions that get evaluated to make a single value
+
+i.e. let result = (5+3)*2;
+     let greeting = "Hello, " + "world!";
+     let isAdult = age >=18 && hasID;
+
+//
+
+Decisions
+
+Making a conditional (if else statement) structures allow programs to execute different blocks of code based of true or false stuff.
+Basically it is exactly how you would think about if else statements in other code.
+
+JavaScript requires full else if written out, so like C# instead of Python.
+
+Switch Statements: Provides a way to execute selective blocks of code based on the value of an expression.
+i.e.
+
+switch (expression) {
+  case value1:
+    code to execute if expression is equal to value1
+    break;
+  case value2:
+    same as above but for value2
+    break;
+  default:
+    code to execute if none of the cases match
+}
+
+//
+
+Loops
+
+loops are used to repeat a block of coode multiple times until a specified condition is met.
+the common loops used in JavaScript are the for loop, while loop, and forEach loop.
+
+for will repeat the code a specified number of times.
+for (let i = 0; i< 10; i++) {}
+
+while repeats as long as a specified condition is true.
+while (condition) {}
+
+forEach is used with arrays. it iterates over each element of the array
+array.forEach(function(element) {});
+
+      As much as I don't want to do this, the people who put these lessons together have little intelligence, so I'm
+      going to have to write out each of the loops for the assignment attached to the lesson here. It is an absolute joke,
+      but I guess I have to get something out of paying money to these absolute retards. Seriously, who gives an assignment
+      that breaks after you have created one loop.
+
+const DAYS = 6;
+const LIMIT = 30;
+let studentReport = [11, 42, 33, 64, 29, 37, 44]
+
+// for loop
+for (let i = 0; i < studentReport.length; i++) {
+  if (studentReport[i] < LIMIT) {
+    console.log(studentReport[i]);
+  }
+}
+
+// while loop
+let i = 0;
+while (i < studentReport.length) {
+  if (studentReport[i] , LIMIT) {
+    console.log(studentReport[i]);
+  }
+  i++;
+}
+
+// forEach loop
+studentReport.forEach(function (item) {
+  if (item < LIMIT) {
+    console.log(item);
+  }
+});
+
+//for...in loop
+for (let i in studentReport) {
+  if (studentReport[i] < LIMIT) {
+    console.log(studentReport[i]);
+  }
+}
+
+      a bunch of extra retarded crap I'm supposed to learn but they can't make even a half competent lesson to save their lives.
+
+const numberOfDays = 6; // variable days in future setting
+const options = { weekday: "long" }; // Intl.DateTimeFormat vs. short, etc.
+
+// BEGIN
+const today = new Date();
+// TODAY test output
+let todaystring = new Intl.DateTimeFormat("en-US", options).format(today);
+document.getElementById("today").innerHTML = `Today is <strong>${todaystring}</strong>`;
+
+// next n days
+for (let i = 1; i <= numberOfDays; i++) {
+	const nextday = new Date();
+	nextday.setDate(today.getDate() + i);
+	let nextdaystring = new Intl.DateTimeFormat("en-US", options).format(nextday);
+	const item = document.createElement("li"); // list item
+	item.textContent = nextdaystring;
+	document.querySelector("ul").appendChild(item);
+}
+//
+
+
+\\ wo2 Document Object Model //
+
+Nodes are also referred to by their position in the tree relative to other nodes:
+
+    Root node: The top node in the tree, which in the case of HTML is always the HTML node (other markup vocabularies like SVG 
+    and custom XML will have different root elements).
+    Child node: A node directly inside another node. For example, IMG is a child of SECTION in the above example.
+    Descendant node: A node anywhere inside another node. For example, IMG is a child of SECTION in the above example, 
+    and it is also a descendant. IMG is not a child of BODY, as it is two levels below it in the tree, but it is a descendant of BODY.
+    Parent node: A node which has another node inside it. For example, BODY is the parent node of SECTION in the above example.
+    Sibling nodes: Nodes that sit on the same level under the same parent node in the DOM tree. For example, IMG and P are 
+    siblings in the above example.
+
+Note that, as with many things in JavaScript, there are many ways to select an element and store a reference to it in a variable. Document.querySelector() is the recommended modern approach. It is convenient because it allows you to select elements using CSS selectors. The above querySelector() call will match the first <a> element that appears in the document. If you wanted to match and do things to multiple elements, you could use Document.querySelectorAll(), which matches every element in the document that matches the selector, and stores references to them in an array-like object called a NodeList.
+
+There are older methods available for grabbing element references, such as:
+
+    Document.getElementById(), which selects an element with a given id attribute value, e.g., <p id="myId">My paragraph</p>. 
+    The ID is passed to the function as a parameter, i.e., const elementRef = document.getElementById('myId').
+    Document.getElementsByTagName(), which returns an array-like object containing all the elements on the page of a given type, 
+    for example <p>s, <a>s, etc. The element type is passed to the function as a parameter, i.e., 
+    const elementRefArray = document.getElementsByTagName('p').
+
+if you append a node that already exists, appendChild(), it simply moves it to the bottom of the page. If you wanted to copy it, you would
+have to use cloneNode(). you can also remove a node with removeChild(). look at dom-example.html for better explained info
+
+CSS manipulation via javascript
+
+The first way is to add inline styles directly onto elements you want to dynamically style. This is done with the HTMLElement.style 
+property, which contains inline styling information for each element in the document. You can set properties of this object to directly 
+update element styles.
+//
+
+
+\\ week02 Handling DOM events //
+
+Click Event: triggered by user clicks on an element.
+i.e.
+buttonElement.addEventListener('click', function() {
+  code to execute when the element is clicked
+});
+
+Keyup Event: triggered when a key is released. good for keyboard input
+i.e.
+buttonElement.addEventListener('keyup, function() {
+  code to execute when a key is released
+});
+
+DOMContentLoaded Event: triggered by the HTML document is completely parsed and all deferred scripts have been executed.
+It is mainly used for initializing JavaScript applications.
+i.e.
+document.addEventListener("DOMContentLoaded", function() {
+  code to execute when the DOM is parsed
+});

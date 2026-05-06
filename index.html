@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131-Dynamic Web Fundamentals-Braxton LaFleur</title>
+    <meta name="description" content="This is my homepage for the course WDD 131. It contains a brief summary about me and where I live.">
+    <meta name="author" content="Braxton LaFleur">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <span id="course-title" class="course-title">WDD 131-Dynamic Web Fundamentals</span>
+        <nav class="navigation">
+                <a href="https://www.linkedin.com/">LinkedIn</a>
+                <a href="https://byupw.instructure.com/">Canvas</a>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/16?lang=eng&id=p9#p9">Scripture</a>
+                <a href="#">Final Project</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Braxton LaFleur</h1>
+        <section class="card">
+            <h2>About Me</h2>
+            <!-- I was having a problem getting the image to be to the right of the text. By
+            putting the img in html before the text, I was able to get it to work correctly. -->
+            <img src="images/profile.jpg" alt="Braxton LaFleur" class="right-img">
+            <p>Hello, my name is Braxton LaFleur. I grew up and live in Syracuse, Utah. 
+                I have served a mission for my church in Virginia, which allowed me to visit many American 
+                Civil War history sites. I'm currently going through schooling to become a Seminary 
+                and Institute teacher. However, failing that, I have become very interested in the 
+                field of coding and found great satisfaction in learning how to code.</p>
+            <h3>Utah, United States of America</h3>
+            <div class="second-par">
+                <figure>
+                    <img src="images/utahflag.jpg" alt="Utah Flag" class="left-img">
+                    <figcaption>Official Flag of Utah</figcaption>
+                </figure>
+                <p>Utah is a state in the midwest of America. Home to a rugged desert beauty, there are
+                    many amazing places to visit. One of which is the many beautiful
+                    natural arch formations found in the south-east of the state.</p>
+            </div>
+        </section>
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <div class="list">
+                <ul>
+                    <li><a href="#">Dev.to Community</a></li>
+                    <li><a href="#">Smashing Magazine</a></li>
+                    <li><a href="#">CSS Tricks</a></li>
+                    <li><a href="#">W3 Schools</a></li>
+                    <li><a href="#">Udemy</a></li>
+                    <li><a href="#">Lorem Picsum Image Placeholder</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>
+            ©<span id="currentyear"></span> | Braxton LaFleur | Utah
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>

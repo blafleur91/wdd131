@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM example</title>
+    <style>
+      .highlight {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        width: 250px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script>
+        // this selects the a element (it targets the link) and gives it a variable name
+        const link = document.querySelector("a"); 
+        // this says, "the text content of the link should be Mozilla Developer Network"
+        link.textContent = "Mozilla Developer Network";
+        // this grabs where the link goes too, and changes it to a different website
+        link.href = "https://developer.mozilla.org";
+        // this selects the section element and gives it a variable name
+        const sect = document.querySelector("section");
+        // this creates a variable name for a newly created paragraph element (<p>)
+        const para = document.createElement("p");
+        // this adds text to the new paragraph
+        para.textContent = "We hope you enjoyed the ride.";
+        // this adds the new paragraph to the section element
+        sect.appendChild(para);
+        // this creates a new text nod and adds text to it.
+        const text = document.createTextNode(
+          " - the premier source for web development knowledge.",
+        );
+        // these two create a variable name for the original p element in the html document, and then adds the new text node to it.
+        const linkPara = document.querySelector("p");
+        linkPara.appendChild(text);
+        // this moves the already existing node to the bottom of the page.
+        // sect.appendChild(linkPara);
+        // this removes the node all together.
+        // sect.removeChild(linkPara);
+        // an older way of doing this is below
+        // linkPara.parentNode.removeChild(linkPara);
+
+        // Css Manipulation, this specifically effects the para variable from line 23-25
+        // para.style.color = "white";
+        // para.style.backgroundColor = "black";
+        // para.style.padding = "10px";
+        // para.style.width = "250px";
+        // para.style.textAlign = "center";
+
+        // this adds a class name to the element para
+        para.classList.add("highlight");
+      </script>
+  </body>
+</html>
