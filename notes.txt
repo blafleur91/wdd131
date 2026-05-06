@@ -1,6 +1,7 @@
 \This is the notes for variables and how to use them in javascript/
 
 YOU DO A JAVA SCRIPT BY <script src="scripts/yourscript.js" defer></script>
+make sure that it is in the top of the page in the head.
 
 //
 to make a note in javascript, do // for one line, or
@@ -133,6 +134,8 @@ listItems += `<li>${temple}</li>`;
 //
 
 NOTES ABOUT CRAP NOT COVERED IN LESSONS BUT SOMEHOW SUPPOSED TO KNOW
+
+ADDED CONTEXT this information is in the code pen assignment.
 //
 Answer: #2
 
