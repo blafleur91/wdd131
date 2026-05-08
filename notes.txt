@@ -158,6 +158,18 @@ If any operand in an arithmetic expression is NaN, the result of the
 entire expression will be NaN. NaN is not equal to any value, including NaN.
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 \\ week 02 CSS Media Queries //
 
 @media specifies conditions to determine when when a block of CSS rules should be applied.

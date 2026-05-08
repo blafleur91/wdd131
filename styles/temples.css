@@ -1,26 +1,44 @@
 header {
-    display: block;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
     background-color: rgb(1, 1, 70);
     color: #eee;
-    font-size: 1rem;
-    padding: 0.5rem;
-    height: auto;
+    font-size: 2rem;
+    padding: 1rem;
+    /* height: auto; */
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    margin-left: auto;
 }
 
 .navigation {
-    background-color: #333;
+    /* background-color: rgb(1, 1, 70); */
+    display: none;
+}
+
+/* .navigation li {
+    display: none;
+} */
+
+.navigation.open {
     display: flex;
     list-style: none;
     flex-direction: column;
-    font-size: 1rem;
-}
-
-.navigation li {
-    display: none;
+    font-size: 3rem;
+    text-align: center;
 }
 
 .navigation a {
     text-decoration: none;
+    color: #eee;
 }
 
 .navigation a:hover {
@@ -37,17 +55,15 @@ the list of links so it actually will do what is wanted. */
 }
 
 #menu {
-    font-size: 1rem;
+    font-size: 2rem;
     border: 0;
     background: none;
     color: #eee;
-    position: relative;
+    /* position: relative;
     top: 1rem;
-    right: 1rem;
-    float: right;
+    right: 1rem; */
+    /* float: right; */
 }
-
-
 
 #menu::before {
 	content: "☰";
@@ -55,6 +71,12 @@ the list of links so it actually will do what is wanted. */
 
 #menu.open::before {
 	content: "X";
+}
+
+main {
+    max-width: 20rem;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
 }
 
 body {
