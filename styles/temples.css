@@ -17,6 +17,9 @@ header {
 
 nav {
     margin-left: auto;
+    display: flex;
+    /* text-align: center; */
+    flex-direction: column;
 }
 
 .navigation {
