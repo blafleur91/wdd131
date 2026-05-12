@@ -1,0 +1,5 @@
+.hero img {
+    width: 100%;
+    height: auto;
+    /* could also use aspect-ratio: auto; to do basically the same thing. */
+}

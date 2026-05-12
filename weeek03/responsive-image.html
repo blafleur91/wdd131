@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="hero">
+            <picture>
+                <!-- example did not show having the width and height on the two source ones, however you do need them to make it actually work. -->
+                <source srcset="images/hero-large.webp.webp" media="(min-width: 1000px)" width="1500" height="750">
+                <source srcset="images/hero-medium.webp.webp" media="(min-width: 500px)" width="1000" height="500">
+                <img src="images/hero-small.webp.webp" alt="A picture of the Bountiful Temple" width="500" height="250">
+            </picture>
+        </div>
+    </main>
+</body>
+</html>
