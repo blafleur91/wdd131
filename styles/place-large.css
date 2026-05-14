@@ -20,8 +20,17 @@
         color: #eee;
     }
 
+    h2 {
+        background-color: rgb(70, 1, 1, 0.5);
+        color: #eee;
+    }
+
     .hero {
         position: relative;
+    }
+
+    img {
+        display: block;
     }
 
     .data {
