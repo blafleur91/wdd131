@@ -1,0 +1,11 @@
+* {
+    font-family: arimo;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+ul {
+    list-style-type: none;
+}
