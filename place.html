@@ -7,40 +7,48 @@
     <meta name="description" content="This page contains information about my home state of Utah.">
     <meta name="author" content="Braxton LaFleur">
     <link rel="stylesheet" href="styles/place.css">
-    <!-- <link rel="stylesheet" href="styles/.css"> -->
+    <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <picture>
-        <source srcset="">
-        <img src="" alt="">
-    </picture>
-    <header>
-        <p>Utah</p>
-    </header>
-    <main>
-        <h1>Data</h1>
-        <ul>
-            <li><span class="bold">Area:</span> 84,899 sq m</li>
-            <li><span class="bold">Population:</span> 3,551,150</li>
-            <li><span class="bold">Capital:</span> Salt Lake City</li>
-            <li><span class="bold">Languages:</span> Utah</li>
-            <li><span class="bold">Currency:</span> Dollar</li>
-            <li><span class="bold">Time Zone:</span> Mountain Daylight Time (GMT-6)</li>
-            <li><span class="bold">Calling Code:</span> 801, 385, 435</li>
-            <li><span class="bold">Internet TLD:</span> ut.us</li>
-        </ul>
-        <h1>Weather</h1>
-        <ul>
-            <li><span class="bold">Temperature:</span> <span id="temperature"></span></li>
-            <li><span class="bold">Conditions:</span> Sunny</li>
-            <li><span class="bold">Wind:</span> <span id="wind-speed"></span></li>
-            <li><span class="bold">Wind Chill:</span> <span id="wind-chill"></span></li>
-        </ul>
-    </main>
+    <div class="hero">
+        <header>
+            <p>Utah</p>
+        </header>
+        <picture>
+            <source srcset="images/hero-large.webp" media="(min-width: 768px)" class="background">
+            <img src="images/hero-small.webp" alt="A picture of rock arches in Arches National Park.">
+        </picture>
+        <main>
+            <div class="data">
+                <h1>Data</h1>
+                <ul>
+                    <li><span class="bold">Area:</span> 84,899 sq m</li>
+                    <li><span class="bold">Population:</span> 3,551,150</li>
+                    <li><span class="bold">Capital:</span> Salt Lake City</li>
+                    <li><span class="bold">Languages:</span> English</li>
+                    <li><span class="bold">Currency:</span> Dollar</li>
+                    <li><span class="bold">Time Zone:</span> Mountain Daylight Time (GMT-6)</li>
+                    <li><span class="bold">Calling Code:</span> 801, 385, 435</li>
+                    <li><span class="bold">Internet TLD:</span> ut.us</li>
+                </ul>
+            </div>
+            <div class="weather">
+                <h1 class="mobile">Weather</h1>
+                <img src="images/sun.svg" alt="picture of the sun" class="mobile-img">
+                <h1 class="desktop">Weather ☀️</h1>
+                <ul>
+                    <li><span class="bold">Temperature:</span> <span id="temperature"></span></li>
+                    <li><span class="bold">Conditions:</span> Sunny</li>
+                    <li><span class="bold">Wind:</span> <span id="wind-speed"></span></li>
+                    <li><span class="bold">Wind Chill:</span> <span id="wind-chill"></span></li>
+                </ul>
+            </div>
+        </main>
+    </div>
     <footer>
         <p>
             ©<span id="currentyear"></span> | Braxton LaFleur | Utah

@@ -2,10 +2,69 @@
     font-family: arimo;
 }
 
+.desktop {
+    display: none;
+}
+.mobile-img {
+    width: 75px;
+    height: auto;
+}
+
 .bold {
     font-weight: 700;
 }
 
+.hero {
+    background-color: #eee;
+}
+
 ul {
     list-style-type: none;
+}
+
+picture {
+    background-color: #eee;
+}
+
+picture img {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    display: block;
+    background-color: rgb(1, 1, 70);
+    color: #eee;
+    text-align: center;
+    font-size: 3rem;
+    padding: 0.1rem;
+}
+
+body {
+    max-width: 500px;
+    margin: 0 auto;
+    /* display: flex;
+    flex-wrap: wrap; */
+    background-color: #eee;
+}
+
+main {
+    text-align: center;
+    /* display: grid;
+    place-items: center; */
+    /* margin: 0; */
+    /* padding: 0; */
+}
+
+footer {
+    /* grid-column: span 2; */
+    background-color: rgb(70, 1, 1);
+    color: #eee;
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: auto;
+}
+footer p {
+    text-align: center;
+    
 }

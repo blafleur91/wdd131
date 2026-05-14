@@ -1,0 +1,42 @@
+@media (min-width: 768px) {
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .mobile-img {
+        display: none;
+    }
+
+    body {
+        max-width: 1000px;
+    }
+
+    h1 {
+        background-color: rgb(70, 1, 1, 0.5);
+        color: #eee;
+    }
+
+    .hero {
+        position: relative;
+    }
+
+    .data {
+        background-color: rgb(238, 238, 238, 0.5);
+        position: absolute;
+        top: 11rem;
+        left: 1rem;
+    }
+
+    .weather {
+        position: absolute;
+        background-color: rgb(238, 238, 238, 0.5);
+        right: 1rem;
+        bottom: 2rem;
+    }
+
+    
+}
