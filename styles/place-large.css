@@ -3,8 +3,8 @@
         display: block;
     }
 
-    .mobile {
-        display: none;
+    .desktop::after {
+        content: " ☀️"
     }
 
     .mobile-img {
