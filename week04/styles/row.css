@@ -1,0 +1,101 @@
+.head {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+}
+
+body {
+    padding: 5%;
+}
+
+table {
+	width: 400px;
+	border: thin solid hsla(0,0%,20%,.8); 
+	border-collapse: collapse;
+
+    th {
+    font-size: larger;
+    /* padding: 7px, 15px; */
+    } 
+
+    th,
+    td {
+        padding: 0.5em 1rem;
+        border: 1px solid grey;
+    }
+
+    td {
+        text-align: center;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: rgb(245, 245, 245);
+    }
+
+    caption {
+        padding: 10px;
+        caption-side: bottom;
+    }
+}
+
+.header {
+        background-color: rgb(51, 51, 51);
+        color: white;
+        border: none;
+    } 
+
+
+
+
+/* line between what I wrote and the example given. the html was basically spot on so I won't do that there. */
+
+/* body {
+  padding: 5%;
+}
+
+table {
+  width: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-collapse: collapse;
+
+  caption {
+    caption-side: bottom;
+    font-size: smaller;
+    padding: 0.2rem;
+   } 
+
+   th,
+  td {
+    padding: 0.5em 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    white-space: pre;
+  } 
+ 
+  thead th,
+  tbody td {
+    text-align: center;
+  }
+
+  thead {
+    color: #fff;
+    background: #000;
+
+    th {
+      padding: 1rem;
+      font-size: larger;
+    }
+
+    tr:nth-last-child(1) {
+      background-color: #333;
+    }
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #eee;
+  }
+}
+
+.blank {
+  background-color: #000;
+} */

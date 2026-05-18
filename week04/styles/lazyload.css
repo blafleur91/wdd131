@@ -1,0 +1,24 @@
+img {
+    display: block;
+    margin: 0 auto;
+    background: #000;
+    animation: fade 15s;
+}
+
+main img {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
