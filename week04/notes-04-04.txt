@@ -1,0 +1,55 @@
+
+
+array.filter()
+
+The array.filter() method creates a new array containing only elements that meet a specified condition.
+
+    Reference Array.filter() – MDN
+
+array.map()
+
+The array.map() method transforms each element of an array using a provided function and returns a new array with the transformed elements. The original array is not modified, 
+and the new array has the same number of elements as the original.
+
+    Reference Array.map() – MDN
+
+array.reduce()
+
+The array.reduce() method reduces an array to a single value by executing a reducer function on each element. The reducer function takes four arguments: accumulator, 
+current value, current index, and source array. The function's returned value updates the accumulator, which is carried through each iteration and becomes the final result.
+
+    Reference Array.reduce() – MDN
+
+
+for the example on the array.filter, they have the example of 
+    let namesB = names.filter(name => name.charAt(0) === 'B');
+
+the let connotates a variable being made, namesB is the variable (specifically a new array being made), names.filter calls the function, name => takes one of the variables in the array, 
+name.charAt(0) takes the first letter of the variable, === 'B' checks if the first letter of the variable matches capital b. If so it gets added to the new array being made.
+
+to note, the name can be anything I am guessing. it is like i in foreach loops.
+
+
+because I better understand what is going on and I actually know how to get what is wanted, my guesstimate is
+    let namesLength = names.array(name => name.length)
+        although I guessed I would need parantheses around the first name in there, the filter didn't so I didn't know for certain.
+        Also I forgot to add an ending semicolon.
+
+for the array.map(), the example is
+    let nameLengths = names.map((name) => name.length);
+
+the let connotates a variable being made, namesLength is the name of the variable (specifically an array being made), names.map is calling a function,
+(name) => is taking one of the variables from the initial array, name.length is setting the value in the new array to be the length of each name in the original array.
+
+for the array.reduce() my guesstimate would be
+    let averageStringLength = names.reduce(0, name.length)
+    This is too short, but I really don't know what I am doing with this one.
+
+the example given is 
+    names.reduce((total, name) => total + name.length, 0) / names.length;
+    The initial value for the accumulator is set to 0. Inside the reducer function, total represents the accumulated sum of string lengths, 
+    and name represents each individual name in the array. The reducer function adds the length of each name to the total in each iteration 
+    (equivalent to total += name.length).
+
+ok, so I think I can explain it. the names.reduce((total, name) is initializing the function with two variables. => total + name.length, 0) is telling it the starting value is zero
+and then it is adding the names number length to the total. the / names.length; then divides the total of all the names lengths by the amoung of names in the array.
