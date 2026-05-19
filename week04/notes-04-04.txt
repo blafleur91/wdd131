@@ -53,3 +53,212 @@ the example given is
 
 ok, so I think I can explain it. the names.reduce((total, name) is initializing the function with two variables. => total + name.length, 0) is telling it the starting value is zero
 and then it is adding the names number length to the total. the / names.length; then divides the total of all the names lengths by the amoung of names in the array.
+
+Ok, so after giving very simple examples of how these are used, they then proceed to blindside you with an exceptionally hard assignment that requires basic javascript understanding.
+Something which they have failed to teach, So I'm going to copy and paste the answers here since they failed to teach me the majority of the stuff required to do it.
+To be frank, I can look over this and understand what is going on, but only because so many components were taught in other coding classes.
+
+<main>
+  <h1>JavaScript Array Methods</h1>
+  <div class="linkback">📑 <a href="https://codepen.io/BYU-Idaho/pen/EaxworK" target="_blank">Exercise Link</a></div>
+  <nav>
+    <span><a href="#map">map()</a></span>
+    <span><a href="#filter">filter()</a></span>
+    <span><a href="#reduce">reduce()</a></span>
+    <span><a href="#forEach">forEach()</a></span>
+    <span><a href="#find">find()</a></span>
+    <span><a href="#indexOf">indexOf()</a></span>
+  </nav>
+  <hr>
+  <p><em>View the solution to each exercise in the JS panel.</em></p>
+  <hr>
+  <section>
+    <h2 id="map">map()</h2>
+    <h3>Exercise 1️⃣</h3>
+    <p>Using map(), process the given <strong>courses</strong> array to display just the course subjects (CSE, WDD) as list items <strong>&lt;li&gt;</strong> in the given unordered list with an <strong>id</strong> of <strong>subjects</strong>.</p>
+    <div class="output">
+      Subject List
+      <ul id="subjects"></ul>
+    </div>
+  </section>
+  <hr>
+  <section>
+    <h2 id="filter">filter()</h2>
+    <h3>Exercise 2️⃣</h3>
+    <p>Using filter(), process the given <strong>countries</strong> array to display only those countries that start with the letter "U" as list items <strong>&lt;li&gt;</strong> in the given unordered list with an <strong>id</strong> of <strong>u</strong>.</p>
+    <div class="output">
+      Filterd Countries List
+      <ul id="u"></ul>
+    </div>
+  </section>
+
+  <hr>
+  <section>
+    <h2 id="reduce">reduce()</h2>
+    <h3>Exercise 3️⃣</h3>
+    <p>An array of <strong>fruits</strong> objects each with a <strong>name</strong> and <strong>price</strong> is provided. Each fruit has a different price. Calculate the total cost of all the fruits using <strong>reduce()</strong> and display it in the <strong>&lt;div&gt;</strong> with an <strong>id</strong> of <strong>total</strong>.</p>
+    <div class="output">
+      Reduce to total fruit cost
+      <div id="total"></div>
+    </div>
+  </section>
+  <hr>
+  <section>
+    <h2 id="forEach">forEach()</h2>
+    <h3>Exercise 4️⃣</h3>
+    <div class="output">
+      Student List
+      <ul id="studentList"></ul>
+    </div>
+  </section>
+
+  <hr>
+  <section>
+    <h2 id="find">find()</h2>
+    <h3>Exercise 5️⃣</h3>
+    <p>Using <strong>find()</strong>, retrieve the first product from the given <strong>products</strong> array where the price is greater than 20, and display its name inside the <strong>&lt;p&gt;</strong> with an <strong>id</strong> of <strong>product</strong>.</p>
+    <div class="output">
+      1st Product Price > 20
+      <p id="product"></p>
+    </div>
+  </section>
+
+  <hr>
+  <section>
+    <h2 id="indexOf">indexOf()</h2>
+    <h3>Exercise 6️⃣</h3>
+    <p>Using indexOf(), find the position of "Canada" 🍁 in the given <strong>countries</strong> array and display the index inside the <strong>&lt;p&gt;</strong> with an <strong>id</strong> of <strong>output</strong>. If Canada is not found in the array, indicate that it was not found. Try to use a ternary operator.</p>
+    <div class="output">
+      Canada Index
+      <p id="output"></p>
+    </div>
+  </section>
+  <p></p>
+</main>
+
+const courses = [
+  "CSE 110",
+  "CSE 111",
+  "WDD 130",
+  "WDD 131",
+  "WDD 231",
+  "CSE 210"
+];
+
+// 1️⃣ map() courses to subject list
+const subjectsList = document.getElementById("subjects");
+const subjects = courses.map((course) => course.split(" ")[0]);
+subjectsList.innerHTML = subjects
+  .map((subject) => `<li>${subject}</li>`)
+  .join("");
+
+// *************************************************************************************
+const countries = [
+  "Uganda",
+  "United States",
+  "Uruguay",
+  "Brazil",
+  "Canada",
+  "Germany",
+  "Japan",
+  "Mexico",
+  "Spain",
+  "Turkey"
+];
+
+// 2️⃣ filter() countries to those starting with "U"
+const uList = document.getElementById("u");
+const uCountries = countries.filter((country) => country.startsWith("U"));
+uList.innerHTML = uCountries.map((country) => `<li>${country}</li>`).join("");
+
+// *************************************************************************************
+const fruits = [
+  { name: "apple", price: 1 },
+  { name: "banana", price: 0.5 },
+  { name: "orange", price: 1.2 },
+  { name: "grape", price: 0.1 }
+];
+
+// 3️⃣ reduce() array of objects to total cost.
+const totalCost = fruits.reduce(
+  (accumulator, fruit) => accumulator + fruit.price,
+  0
+);
+document.getElementById(
+  "total"
+).textContent = `Total Cost: $${totalCost.toFixed(2)}`;
+
+// *************************************************************************************
+const students = [
+  { fullName: "Alice Johnson", state: "California, USA", class: "Mathematics" },
+  {
+    fullName: "Benjamin Lee",
+    state: "Ontario, Canada",
+    class: "Computer Science"
+  },
+  { fullName: "Chloe Smith", state: "London, UK", class: "Physics" },
+  { fullName: "David Kim", state: "Seoul, South Korea", class: "Engineering" },
+  { fullName: "Elena Rodriguez", state: "Madrid, Spain", class: "Biology" },
+  { fullName: "Felix Müller", state: "Berlin, Germany", class: "History" }
+];
+// 4️⃣ loop through the array
+students.forEach((student) => {
+  const li = document.createElement("li");
+  li.textContent = student.fullName;
+  document.getElementById("studentList").appendChild(li);
+});
+
+// *************************************************************************************
+const products = [
+  {
+    name: "Widget A",
+    partNumber: "WA-123",
+    quantity: 50,
+    price: 12.5
+  },
+  {
+    name: "Gear B",
+    partNumber: "GB-456",
+    quantity: 100,
+    price: 3.75
+  },
+  {
+    name: "Lever C",
+    partNumber: "LC-789",
+    quantity: 25,
+    price: 25.0
+  },
+  {
+    name: "Bolt D",
+    partNumber: "BD-012",
+    quantity: 200,
+    price: 0.5
+  },
+  {
+    name: "Panel E",
+    partNumber: "PE-345",
+    quantity: 10,
+    price: 50.0
+  },
+  {
+    name: "Wire F",
+    partNumber: "WF-678",
+    quantity: 150,
+    price: 1.25
+  },
+  {
+    name: "Tube G",
+    partNumber: "TG-901",
+    quantity: 30,
+    price: 18.0
+  }
+];
+// 5️⃣ find first 'expensive' product
+document.getElementById("product").textContent =
+  products.find((product) => product.price > 20)?.name || "No product found";
+
+// *************************************************************************************
+// 6️⃣ determine if Canada is contained within the array countries (see line 18)
+const index = countries.indexOf("Canada");
+document.getElementById("output").textContent =
+  index >= 0 ? index : "Country not found";
