@@ -91,3 +91,107 @@ const temples = [
   },
   // Add more temple objects here...
 ];
+
+const container = document.querySelector(".container")
+
+function createTempleCard(filteredTemples) {
+  document.querySelector(".container").innerHTML = "";
+  filteredTemples.forEach(temple => {
+    const card = document.createElement("section");
+
+    const name = document.createElement("h2");
+    name.textContent = temple.templeName;
+
+    const location = document.createElement("p");
+    location.textContent = `Location: ${temple.location}`;
+
+    const dedicated = document.createElement("p");
+    dedicated.textContent = `Dedicated: ${temple.dedicated}`;
+
+    const size = document.createElement("p");
+    size.textContent = `Size: ${temple.area.toLocaleString()} sq ft`;
+
+    const image = document.createElement("img");
+    image.src = temple.imageUrl;
+    image.alt = temple.templeName;
+    image.loading = "lazy";
+    image.width = "250";
+    // image.height = "auto";
+
+    card.appendChild(name);
+    card.appendChild(location);
+    card.appendChild(dedicated);
+    card.appendChild(size);
+    card.appendChild(image);
+
+    container.appendChild(card);
+  });
+}
+
+createTempleCard(temples);
+
+
+const homeLink = document.querySelector("#home");
+const oldLink = document.querySelector("#old");
+const newLink = document.querySelector("#new");
+const largeLink = document.querySelector("#large");
+const smallLink = document.querySelector("#small");
+
+// nonutahLink.addEventListener("click", () => {
+  // THIS IS AN UNNECESSARY AMOUNT OF CODE, THE CODE ACTUALLY USED SHOULD BE WHAT IS USED.
+  // let nonutah = temples.filter(temple => !temple.location.includes("Utah"));
+  // createTempleCard(nonutah);
+  // createTempleCard(temples.filter(temple => !temple.location.includes("Utah")));
+// });
+
+homeLink.addEventListener("click", () => {
+  createTempleCard(temples);
+});
+
+oldLink.addEventListener("click", () => {
+  createTempleCard(temples.filter(temple => parseInt(temple.dedicated) < 1900));
+});
+
+newLink.addEventListener("click", () => {
+  createTempleCard(temples.filter(temple => parseInt(temple.dedicated) > 2000))
+});
+
+largeLink.addEventListener("click", () => {
+  createTempleCard(temples.filter(temple => temple.area > 90000))
+});
+
+smallLink.addEventListener("click", () => {
+  createTempleCard(temples.filter(temple => temple.area < 10000))
+});
+
+
+
+//  this is the example for the assignment they may or may not have meant to show, so I am going to put it in here as a comment so I know another way to to the above loop.
+// 
+// function createTempleCard() {
+//  temples.forEach(temple => {
+//  let card = document.createElement("section");
+//  let name = document.createElement("h3"); 
+//  let location = document.createElement("p"); 
+//  let dedication = document.createElement("p"); 
+//  let area = document.createElement("p"); 
+//  let img = document.createElement("img"); 
+// 
+//  name.textContent = temple.templeName;
+//  location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+//  dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+//  area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
+//  img.setAttribute("src", temple.imageUrl);
+//  img.setAttribute("alt", `${temple.templeName} Temple`);
+//  img.setAttribute("loading", "lazy");
+//
+//  card.appendChild(name);
+//  card.appendChild(location);
+//  card.appendChild(dedication);
+//  card.appendChild(area);
+//  card.appendChild(img);
+// 
+//  document.querySelector(".res-gird").appendChild(card);
+// 
+// });
+// }

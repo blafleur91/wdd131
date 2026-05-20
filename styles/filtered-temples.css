@@ -100,3 +100,16 @@ footer p {
     text-align: center;
     
 }
+
+.container section {
+    text-align: center;
+    background-color: #eee;
+    padding: 0.5rem;
+    margin: 1rem 0.5rem;
+}
+
+.container img {
+    width: 70%;
+    height: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
