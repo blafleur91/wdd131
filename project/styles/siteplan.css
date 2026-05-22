@@ -1,0 +1,45 @@
+:root {
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+    color: #eee;
+    background-color: rgb(1, 1, 70);
+    max-width: 800px;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 2rem;
+    background-color: rgb(202, 131, 0);
+    max-width: 800px;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* .blue {
+    color: rgb(1, 1, 70);
+    background-color: #eee;
+}
+
+.orange {
+    color: rgb(202, 131, 0);
+    background-color: #eee;
+} */
+
