@@ -18,7 +18,7 @@ header {
 
 textarea {
     display: block;
-    width: 100%;
+    width: 99%;
     margin-bottom: 1rem;
 }
 
@@ -27,7 +27,8 @@ textarea {
     padding: 1rem;
 }
 
-.wf1 input[type="date"] {
+.wf1 input[type="date"],
+.wf1 input[type="text"]  {
     display: block;
     padding: 0.75rem;
     width: 94%;
@@ -100,4 +101,10 @@ footer {
 footer p {
     text-align: center;
     
+}
+
+@media (min-width: 768px) {
+    .wf1 {
+        background-color: #d6d4d4;
+    }
 }
