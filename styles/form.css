@@ -1,0 +1,103 @@
+:root {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* .wf1 select {
+    appearance: none;
+} */
+
+header {
+    /* display: block; */
+    background-color: rgb(1, 1, 70);
+    color: #eee;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.wf1 {
+    background-color: rgb(185, 184, 197);
+    padding: 1rem;
+}
+
+.wf1 input[type="date"] {
+    display: block;
+    padding: 0.75rem;
+    width: 94%;
+}
+.wf1 select {
+    display: block;
+    padding: .75rem;
+    width: 100%;
+}
+
+.wf1 label {
+    display: block;
+    padding-top: 1rem;
+    font-size: .9rem;
+}
+
+.wf1 div {
+    /* padding-top: 1rem; */
+    font-size: .9rem;
+}
+
+.divTop {
+    padding-top: 1rem;
+}
+
+.wf1 input[type="submit"] {
+    border: none;
+    color: black;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.wf1 input[type="checkbox"] {
+    margin-right: 1rem;
+    /* padding: 1rem; */
+    /* width: 1.2rem;
+    height: 1.2rem;
+    margin-bottom: 0.1rem; */
+    transform: scale(2);
+}
+
+.stars {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features {
+    margin-bottom: 1rem;
+    margin-top: -.4rem;
+}
+
+.review {
+    padding-bottom: 5rem;
+    margin-bottom: .2rem;
+}
+
+
+footer {
+    grid-column: span 2;
+    background-color: rgb(1, 1, 70);
+    color: #eee;
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: auto;
+}
+footer p {
+    text-align: center;
+    
+}
