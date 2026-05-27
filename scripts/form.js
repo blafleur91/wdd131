@@ -62,8 +62,9 @@ function populateList(products) {
 populateList(products);
 
 // for the local storage requirement, I am super confused. However, I think this is the correct way to do it?
+// I commented out some segments that are unnecessary.
 
-let reviewCount = localStorage.getItem("reviews");
+// let reviewCount = localStorage.getItem("reviews");
 
 // if nothing exists yet, start at 0
 if (reviewCount === null) {
@@ -75,4 +76,4 @@ reviewCount = Number(reviewCount) + 1;
 
 localStorage.setItem("reviews", reviewCount);
 
-document.getElementById("reviewCount").textContent = reviewCount;
+// document.getElementById("reviewCount").textContent = reviewCount;
