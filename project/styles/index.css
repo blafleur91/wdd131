@@ -1,4 +1,52 @@
+:root {
+    font-family: arimo;
+}
 
+
+
+header {
+    background-color: rgb(1, 1, 70);
+    max-width: 34rem;
+}
+
+main {
+    max-width: 30rem;
+    background-color: #eee;
+    margin: 0 auto;
+    padding: 0 1rem 0 1rem;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+figcaption {
+    text-align: center;
+    margin-top: -1rem;
+}
+
+footer {
+    background-color: rgb(238, 155, 2);
+    max-width: 34rem;
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    border-top: 2px dotted #000;
+    padding-top: 1rem;
+}
+
+.topbar {
+    display: flex;
+    color: #eee;
+    font-size: 2rem;
+    justify-content: space-between;
+    padding: 0.5rem;
+    align-items: center;
+}
 
 #menu {
     font-size: 2rem;
@@ -58,25 +106,39 @@ the list of links so it actually will do what is wanted. */
 
 
 @media (min-width: 768px) {
+
+    .grid {
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .textOne {
+        grid-column: span 2;
+    }
+
+    h2 {
+        border-top: none;
+    }
+
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-left: 1rem;
         padding-right: 1rem;
+        max-width: 60rem;
+        margin: 0 auto;
     }
 
     main {
         max-width: 1000px;
         margin: 0 auto;
+        max-width: 58rem;
         /* place-items: center;  */
+        background-color: white;
     }
 
-    .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-        grid-gap: 1rem;
-    }
 
     #menu {
         display: none;
@@ -93,5 +155,10 @@ the list of links so it actually will do what is wanted. */
 
     .navigation li {
         display: block;
+    }
+
+    footer {
+        max-width: 60rem;
+        margin: 0 auto;
     }
 }
