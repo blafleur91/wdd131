@@ -1,22 +1,26 @@
-
-
-#menu {
-    font-size: 2rem;
-    border: 0;
-    background: none;
+header {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    background-color: rgb(1, 1, 70);
     color: #eee;
-    /* position: relative;
-    top: 1rem;
-    right: 1rem; */
-    /* float: right; */
+    font-size: 2rem;
+    padding: 1rem;
+    /* height: auto; */
 }
 
-#menu::before {
-	content: "☰";
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#menu.open::before {
-	content: "X";
+nav {
+    margin-left: auto;
+    display: flex;
+    /* text-align: center; */
+    flex-direction: column;
+    background-color: rgb(1, 1, 70);
 }
 
 .navigation {
@@ -54,6 +58,70 @@ the list of links so it actually will do what is wanted. */
     display: block;
 }
 
+#menu {
+    font-size: 2rem;
+    border: 0;
+    background: none;
+    color: #eee;
+    /* position: relative;
+    top: 1rem;
+    right: 1rem; */
+    /* float: right; */
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "X";
+}
+
+main {
+    max-width: 20rem;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+}
+
+body {
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
+}
+
+footer {
+    grid-column: span 2;
+    background-color: rgb(238, 155, 2);
+    color: black;
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: auto;
+}
+footer p {
+    text-align: center;
+    
+}
+
+.container section {
+    text-align: center;
+    background-color: #eee;
+    padding: 0.5rem;
+    margin: 1rem 0.5rem;
+}
+
+.container img {
+    width: 70%;
+    height: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+}
+
+.separate {
+    border-top: 4px dotted #eee;
+}
+
 
 
 
@@ -78,6 +146,7 @@ the list of links so it actually will do what is wanted. */
         grid-gap: 1rem;
     }
 
+
     #menu {
         display: none;
     }
@@ -93,5 +162,9 @@ the list of links so it actually will do what is wanted. */
 
     .navigation li {
         display: block;
+    }
+
+    .separate {
+        border-top: none;
     }
 }
