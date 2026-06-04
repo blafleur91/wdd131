@@ -11,6 +11,15 @@
     /* float: right; */
 }
 
+.topbar span {
+    font-size: 2rem;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+}
+
 #menu::before {
 	content: "☰";
 }
@@ -54,10 +63,121 @@ the list of links so it actually will do what is wanted. */
     display: block;
 }
 
+:root {
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: "arimo", sans-serif;
+}
+
+
+
+header {
+    /* display: block; */
+    background-color: rgb(1, 1, 70);
+    color: #eee;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: .75rem;
+}
+
+textarea {
+    display: block;
+    width: 99%;
+    margin-bottom: 1rem;
+}
+
+.wf1 {
+    background-color: rgb(185, 184, 197);
+    padding: 1rem;
+}
+
+.wf1 input[type="tel"],
+.wf1 input[type="text"],
+.wf1 input[type="email"]  {
+    display: block;
+    padding: 0.75rem;
+    width: 94%;
+}
+.wf1 select {
+    display: block;
+    padding: .75rem;
+    width: 100%;
+}
+
+.wf1 label {
+    display: block;
+    padding-top: 1rem;
+    font-size: .9rem;
+}
+
+.wf1 div {
+    /* padding-top: 1rem; */
+    font-size: .9rem;
+}
+
+.divTop {
+    padding-top: 1rem;
+}
+
+.wf1 input[type="submit"] {
+    border: none;
+    color: black;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 1rem;
+}
+
+.wf1 input[type="checkbox"] {
+    margin-right: 1rem;
+    /* padding: 1rem; */
+    /* width: 1.2rem;
+    height: 1.2rem;
+    margin-bottom: 0.1rem; */
+    transform: scale(2);
+}
+
+.stars {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features {
+    margin-bottom: 1rem;
+    margin-top: -.4rem;
+}
+
+.review {
+    padding-bottom: 5rem;
+    margin-bottom: .2rem;
+}
+
+
+footer {
+    grid-column: span 2;
+    background-color: rgb(238, 155, 2);
+    color: black;
+    font-size: 1rem;
+    padding: 0.5rem;
+    height: auto;
+}
+footer p {
+    text-align: center;
+    
+}
+
 
 
 
 @media (min-width: 768px) {
+    :root {
+        max-width: 800px;
+    }
+
+
     header {
         display: flex;
         justify-content: space-between;
@@ -70,12 +190,6 @@ the list of links so it actually will do what is wanted. */
         max-width: 1000px;
         margin: 0 auto;
         /* place-items: center;  */
-    }
-
-    .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-        grid-gap: 1rem;
     }
 
     #menu {

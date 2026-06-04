@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="topbar">
-            <span>Contact Us</span>
+            <span>Contact Form</span>
             <button id="menu" title="Link Menu"></button>
         </div>
         <ul class="navigation">
@@ -26,9 +26,11 @@
     </header>
     <main>
         <form action="review.html" method="get" class="wf1">
-            <label for="name">Your Name<input type="text" name="name" id="name"></label>
-            <label for="phone">Your Number<input type="tel" name="phone" id="phone"></label>
+            <label for="name">Your Name <span class="required">(Required)</span><input type="text" name="name" id="name" required></label>
+            <label for="phone">Your Number <span class="required">(Required)</span><input type="tel" name="phone" id="phone" required></label>
             <label for="mail">Your Email<input type="email" name="mail" id="mail"></label>
+
+            <input type="submit" value="Make Your Request">
         </form>
     </main>
     <footer>
